@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Bot, Mail, Phone } from 'lucide-react';
+import { Bot, Mail, Phone, Lightbulb } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -38,6 +38,20 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#testimonials" className="text-gray-400 hover:text-neon-cyan transition-colors">Success Stories</a>
+              </li>
+              <li>
+                <a href="#gpt-ideas" className="text-gray-400 hover:text-neon-cyan transition-colors">GPT Ideas Assistant</a>
+              </li>
+              <li>
+                <a 
+                  href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-neon-cyan transition-colors flex items-center"
+                >
+                  <Lightbulb size={14} className="mr-1" />
+                  Try GPT Ideas
+                </a>
               </li>
               <li>
                 <a href="#faq" className="text-gray-400 hover:text-neon-cyan transition-colors">FAQ</a>
@@ -117,14 +131,26 @@ const Footer: React.FC = () => {
             </a>
           </p>
           
-          <a 
-            href="https://www.aiwebtools.ai" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="px-6 py-2 rounded-full glass-card border border-neon-cyan/30 text-white hover:bg-neon-cyan/10 transition-all flex items-center"
-          >
-            More AI Tools
-          </a>
+          <div className="flex space-x-4">
+            <a 
+              href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-4 py-2 rounded-full glass-card border border-neon-purple/30 text-white hover:bg-neon-purple/10 transition-all flex items-center"
+            >
+              <Lightbulb size={16} className="mr-2 text-neon-purple" />
+              Try GPT Ideas
+            </a>
+            
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-6 py-2 rounded-full glass-card border border-neon-cyan/30 text-white hover:bg-neon-cyan/10 transition-all flex items-center"
+            >
+              More AI Tools
+            </a>
+          </div>
         </div>
       </div>
     </footer>

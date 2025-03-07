@@ -20,6 +20,7 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" isButton={true}>USE FREE NOW</NavLink>
           <NavLink href="#how-it-works">HOW IT WORKS</NavLink>
+          <NavLink href="#gpt-ideas">GPT IDEAS</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
           <NavLink href="#disclaimer">DISCLAIMER</NavLink>
           <NavLink href="https://www.aiwebtools.ai" target="_blank">MORE AI TOOLS</NavLink>

@@ -10,6 +10,7 @@ import Disclaimer from '@/components/Disclaimer';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import SmokeBackground from '@/components/SmokeBackground';
+import GPTIdeas from '@/components/GPTIdeas';
 
 const Index = () => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const Index = () => {
       <Features />
       <HowItWorks />
       <Testimonials />
+      <GPTIdeas />
       <FAQ />
       <Disclaimer />
       <CTA />
