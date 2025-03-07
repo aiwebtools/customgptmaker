@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Lightbulb, ArrowRight } from 'lucide-react';
+import { Lightbulb, ArrowRight, Sparkles } from 'lucide-react';
 
 const GPTIdeas: React.FC = () => {
   return (
@@ -55,20 +55,25 @@ const GPTIdeas: React.FC = () => {
           </div>
           
           <div className="text-center">
-            <a 
-              href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative overflow-hidden px-6 py-3 rounded-lg text-neon-purple font-medium transition-all border-2 border-neon-purple hover:shadow-neon-purple hover:bg-neon-purple/10 group"
-            >
-              <span className="flex items-center justify-center gap-2">
-                TRY GPT IDEAS ASSISTANT
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
-            <p className="mt-4 text-gray-400 text-sm">
-              Perfect companion to CUSTOM GPT MAKER BOT - get ideas first, then create them!
-            </p>
+            <div className="flex flex-col items-center">
+              <a 
+                href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative overflow-hidden px-8 py-4 rounded-lg font-medium transition-all border-2 border-neon-purple shadow-lg hover:shadow-neon-purple group bg-neon-purple/10 transform hover:scale-105 duration-300"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-neon-purple/20 to-neon-cyan/20 opacity-70 animate-pulse-glow"></span>
+                <span className="flex items-center justify-center gap-3 text-neon-purple text-lg font-bold relative z-10">
+                  <Lightbulb size={20} className="animate-pulse" />
+                  TRY GPT IDEAS ASSISTANT
+                  <Sparkles size={16} className="animate-pulse" />
+                </span>
+              </a>
+              
+              <p className="mt-5 text-gray-300 text-base max-w-md mx-auto border-t border-neon-purple/20 pt-4">
+                <span className="font-semibold text-neon-purple">Perfect companion to CUSTOM GPT MAKER BOT</span> - get ideas first, then create them!
+              </p>
+            </div>
           </div>
         </div>
       </div>
