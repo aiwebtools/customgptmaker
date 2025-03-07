@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Bot, Mail, Phone, Lightbulb } from 'lucide-react';
 
@@ -46,7 +47,14 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#gpt-ideas" className="text-gray-400 hover:text-neon-cyan transition-colors">GPT Ideas Assistant</a>
+                <a 
+                  href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-neon-cyan transition-colors"
+                >
+                  GPT Ideas Assistant
+                </a>
               </li>
               <li>
                 <a 
