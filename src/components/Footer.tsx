@@ -37,7 +37,14 @@ const Footer: React.FC = () => {
                 <a href="#features" className="text-gray-400 hover:text-neon-cyan transition-colors">Features</a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-neon-cyan transition-colors">Success Stories</a>
+                <a 
+                  href="https://aitoolfinder.lovable.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-neon-cyan transition-colors"
+                >
+                  AI TOOLS FINDER & EXPERT GPT
+                </a>
               </li>
               <li>
                 <a href="#gpt-ideas" className="text-gray-400 hover:text-neon-cyan transition-colors">GPT Ideas Assistant</a>
