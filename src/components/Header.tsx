@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Bot, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -68,6 +67,14 @@ const Header: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 GPT IDEAS ASSISTANT
+              </NavLink>
+              <NavLink 
+                href="https://chatgpt.com/g/g-jE03GzdaZ-ai-tools-finder-expert" 
+                isButton={true} 
+                buttonColor="cyan"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                AI TOOLS FINDER & EXPERT
               </NavLink>
               <NavLink href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>HOW IT WORKS</NavLink>
               <NavLink href="#gpt-ideas" onClick={() => setMobileMenuOpen(false)}>GPT IDEAS</NavLink>
