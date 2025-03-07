@@ -61,6 +61,17 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a 
+                  href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-neon-cyan hover:text-white transition-colors flex items-center"
+                >
+                  <Bot size={14} className="mr-1" />
+                  <span className="border-b border-neon-cyan/50">TRY CUSTOM GPT MAKER</span>
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="text-gray-400 hover:text-neon-cyan transition-colors">FAQ</a>
               </li>
               <li>
