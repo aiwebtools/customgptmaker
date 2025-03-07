@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
                 href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-neon-cyan hover:text-neon-purple transition-colors"
+                className="text-neon-cyan hover:text-white transition-colors flex items-center"
               >
-                USE FREE NOW
+                <span className="border-b border-neon-cyan/50">USE CUSTOM GPT MAKER</span>
               </a>
             </div>
           </div>
@@ -47,10 +47,10 @@ const Footer: React.FC = () => {
                   href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-gray-400 hover:text-neon-cyan transition-colors flex items-center"
+                  className="text-neon-purple hover:text-white transition-colors flex items-center"
                 >
                   <Lightbulb size={14} className="mr-1" />
-                  Try GPT Ideas
+                  <span className="border-b border-neon-purple/50">TRY GPT IDEAS ASSISTANT</span>
                 </a>
               </li>
               <li>
@@ -136,17 +136,27 @@ const Footer: React.FC = () => {
               href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-4 py-2 rounded-full glass-card border border-neon-purple/30 text-white hover:bg-neon-purple/10 transition-all flex items-center"
+              className="px-4 py-2 rounded-full glass-card border border-neon-purple/30 text-neon-purple hover:bg-neon-purple/10 transition-all flex items-center"
             >
-              <Lightbulb size={16} className="mr-2 text-neon-purple" />
-              Try GPT Ideas
+              <Lightbulb size={16} className="mr-2" />
+              TRY GPT IDEAS ASSISTANT
+            </a>
+            
+            <a 
+              href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-4 py-2 rounded-full glass-card border border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/10 transition-all flex items-center"
+            >
+              <Bot size={16} className="mr-2" />
+              TRY CUSTOM GPT MAKER
             </a>
             
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-6 py-2 rounded-full glass-card border border-neon-cyan/30 text-white hover:bg-neon-cyan/10 transition-all flex items-center"
+              className="px-6 py-2 rounded-full glass-card border border-white/30 text-white hover:bg-white/10 transition-all flex items-center"
             >
               More AI Tools
             </a>

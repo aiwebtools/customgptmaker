@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                     className="neon-button group"
                   >
                     <span className="flex items-center justify-center gap-2">
-                      USE FREE NOW
+                      TRY CUSTOM GPT MAKER
                       <Sparkles size={16} className="group-hover:animate-pulse" />
                     </span>
                   </a>

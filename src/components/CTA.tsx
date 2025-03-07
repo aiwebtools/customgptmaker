@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight, Bot, Lightbulb } from 'lucide-react';
 
 const CTA: React.FC = () => {
   return (
@@ -25,15 +25,26 @@ const CTA: React.FC = () => {
               className="neon-button group"
             >
               <span className="flex items-center justify-center gap-2">
-                USE CUSTOM GPT MAKER FREE NOW
-                <Sparkles size={16} className="group-hover:animate-pulse" />
+                <Bot size={16} className="group-hover:animate-pulse" />
+                TRY CUSTOM GPT MAKER
+              </span>
+            </a>
+            <a 
+              href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg border border-neon-purple text-white hover:bg-neon-purple/10 transition-all flex items-center justify-center gap-2 relative overflow-hidden group"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2 text-neon-purple">
+                <Lightbulb size={16} className="group-hover:animate-pulse" />
+                TRY GPT IDEAS ASSISTANT
               </span>
             </a>
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg border border-neon-cyan/30 text-white hover:bg-neon-cyan/10 transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition-all flex items-center justify-center gap-2"
             >
               Discover More AI Tools
               <ArrowRight size={16} />

@@ -59,10 +59,10 @@ const GPTIdeas: React.FC = () => {
               href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="neon-button group"
+              className="relative overflow-hidden px-6 py-3 rounded-lg text-neon-purple font-medium transition-all border-2 border-neon-purple hover:shadow-neon-purple hover:bg-neon-purple/10 group"
             >
               <span className="flex items-center justify-center gap-2">
-                TRY GPT IDEAS ASSISTANT NOW
+                TRY GPT IDEAS ASSISTANT
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </a>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Sparkles, MessageSquare, Bot, ArrowRight, Check } from 'lucide-react';
+import { Sparkles, MessageSquare, Bot, ArrowRight, Check, Lightbulb } from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
   const steps = [
@@ -68,7 +68,7 @@ const HowItWorks: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
             target="_blank" 
@@ -76,8 +76,21 @@ const HowItWorks: React.FC = () => {
             className="neon-button inline-block"
           >
             <span className="flex items-center justify-center gap-2">
-              CREATE YOUR CUSTOM GPT NOW
+              <Bot size={16} className="group-hover:animate-pulse" />
+              TRY CUSTOM GPT MAKER
               <Sparkles size={16} className="animate-pulse" />
+            </span>
+          </a>
+          
+          <a 
+            href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative overflow-hidden px-6 py-3 rounded-lg text-neon-purple font-medium transition-all border-2 border-neon-purple hover:shadow-neon-purple hover:bg-neon-purple/10 inline-block"
+          >
+            <span className="flex items-center justify-center gap-2">
+              <Lightbulb size={16} />
+              TRY GPT IDEAS ASSISTANT
             </span>
           </a>
         </div>

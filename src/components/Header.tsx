@@ -18,7 +18,8 @@ const Header: React.FC = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" isButton={true}>USE FREE NOW</NavLink>
+          <NavLink href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" isButton={true} buttonColor="cyan">CUSTOM GPT MAKER</NavLink>
+          <NavLink href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" isButton={true} buttonColor="purple">GPT IDEAS</NavLink>
           <NavLink href="#how-it-works">HOW IT WORKS</NavLink>
           <NavLink href="#gpt-ideas">GPT IDEAS</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
@@ -42,10 +43,11 @@ interface NavLinkProps {
   href: string;
   children: React.ReactNode;
   isButton?: boolean;
+  buttonColor?: 'cyan' | 'purple';
   target?: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children, isButton = false, target }) => {
+const NavLink: React.FC<NavLinkProps> = ({ href, children, isButton = false, buttonColor = 'cyan', target }) => {
   return (
     <a 
       href={href}
@@ -54,11 +56,24 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, isButton = false, tar
       className={cn(
         "transition-all duration-300 text-sm font-semibold tracking-wide",
         isButton
-          ? "neon-button"
+          ? cn(
+              "relative overflow-hidden px-6 py-3 rounded-lg text-white font-medium transition-all",
+              buttonColor === 'purple' ? "before:bg-neon-purple/20 hover:shadow-neon-purple" : "before:bg-cyberpunk-gradient before:animate-background-pan before:bg-[length:300%] before:opacity-80 hover:shadow-neon-cyan"
+            )
           : "text-gray-300 hover:text-neon-cyan relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-neon-cyan after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
       )}
     >
-      {isButton ? <span>{children}</span> : children}
+      {isButton ? (
+        <>
+          <span className="absolute inset-0 bg-black/50 rounded-lg"></span>
+          <span className={cn(
+            "relative z-10", 
+            buttonColor === 'purple' ? "text-neon-purple" : "text-neon-cyan"
+          )}>
+            {children}
+          </span>
+        </>
+      ) : children}
     </a>
   );
 };
