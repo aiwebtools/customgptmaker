@@ -30,7 +30,7 @@ const Index = () => {
     });
     
     // Set page title
-    document.title = 'CUSTOM GPT MAKER BOT - Transform AI to Match Your Vision';
+    document.title = 'Custom GPT Maker Bot - Create AI Tools That Match Your Vision';
   }, []);
 
   return (
