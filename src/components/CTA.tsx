@@ -50,6 +50,10 @@ const CTA: React.FC = () => {
               <ArrowRight size={16} />
             </a>
           </div>
+          
+          <div className="mt-8 text-sm text-gray-400 max-w-2xl mx-auto">
+            <p className="mb-2"><strong>Note:</strong> Both tools require a ChatGPT Plus subscription to access. By using these tools, you agree to OpenAI's terms of service.</p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,9 +1,15 @@
 
-import React from 'react';
-import { Bot } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bot, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Header: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header className="fixed w-full top-0 z-50 glass-card bg-black/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -19,7 +25,7 @@ const Header: React.FC = () => {
         
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" isButton={true} buttonColor="cyan">CUSTOM GPT MAKER</NavLink>
-          <NavLink href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" isButton={true} buttonColor="purple">GPT IDEAS</NavLink>
+          <NavLink href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" isButton={true} buttonColor="purple">GPT IDEAS ASSISTANT</NavLink>
           <NavLink href="#how-it-works">HOW IT WORKS</NavLink>
           <NavLink href="#gpt-ideas">GPT IDEAS</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
@@ -28,13 +34,50 @@ const Header: React.FC = () => {
         </nav>
         
         <div className="md:hidden">
-          <button className="p-2 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            className="p-2 text-white" 
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10">
+          <div className="container mx-auto px-4 py-3">
+            <nav className="flex flex-col space-y-4 py-3">
+              <NavLink 
+                href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
+                isButton={true} 
+                buttonColor="cyan"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                CUSTOM GPT MAKER
+              </NavLink>
+              <NavLink 
+                href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
+                isButton={true} 
+                buttonColor="purple"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                GPT IDEAS ASSISTANT
+              </NavLink>
+              <NavLink href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>HOW IT WORKS</NavLink>
+              <NavLink href="#gpt-ideas" onClick={() => setMobileMenuOpen(false)}>GPT IDEAS</NavLink>
+              <NavLink href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</NavLink>
+              <NavLink href="#disclaimer" onClick={() => setMobileMenuOpen(false)}>DISCLAIMER</NavLink>
+              <NavLink href="https://www.aiwebtools.ai" target="_blank" onClick={() => setMobileMenuOpen(false)}>MORE AI TOOLS</NavLink>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
@@ -45,14 +88,16 @@ interface NavLinkProps {
   isButton?: boolean;
   buttonColor?: 'cyan' | 'purple';
   target?: string;
+  onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children, isButton = false, buttonColor = 'cyan', target }) => {
+const NavLink: React.FC<NavLinkProps> = ({ href, children, isButton = false, buttonColor = 'cyan', target, onClick }) => {
   return (
     <a 
       href={href}
       target={target}
       rel={target ? "noopener noreferrer" : undefined}
+      onClick={onClick}
       className={cn(
         "transition-all duration-300 text-sm font-semibold tracking-wide",
         isButton
