@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,7 +69,7 @@
   }
   
   .text-gradient {
-    @apply bg-cyberpunk-gradient bg-clip-text text-transparent bg-300% animate-background-pan;
+    @apply bg-cyberpunk-gradient bg-clip-text text-transparent bg-[length:300%] animate-background-pan;
   }
   
   .neon-border {
@@ -95,7 +94,7 @@
   
   .neon-button::before {
     content: '';
-    @apply absolute inset-0 bg-cyberpunk-gradient bg-300% animate-background-pan opacity-80;
+    @apply absolute inset-0 bg-cyberpunk-gradient bg-[length:300%] animate-background-pan opacity-80;
   }
   
   .neon-button::after {
