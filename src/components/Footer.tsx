@@ -51,13 +51,13 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
+                  href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-neon-cyan hover:text-white transition-colors flex items-center"
+                  className="text-neon-purple hover:text-white transition-colors flex items-center"
                 >
-                  <Bot size={14} className="mr-1" />
-                  <span className="border-b border-neon-cyan/50">TRY CUSTOM GPT MAKER</span>
+                  <Lightbulb size={14} className="mr-1" />
+                  <span className="border-b border-neon-purple/50">TRY GPT IDEAS ASSISTANT</span>
                 </a>
               </li>
               <li>
