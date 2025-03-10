@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -12,9 +12,24 @@ import Footer from '@/components/Footer';
 import SmokeBackground from '@/components/SmokeBackground';
 import GPTIdeas from '@/components/GPTIdeas';
 import ToolsDisclaimer from '@/components/ToolsDisclaimer';
+import DisclaimerPopup from '@/components/DisclaimerPopup';
 
 const Index = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
   useEffect(() => {
+    // Check if the user has already seen the disclaimer
+    const hasAgreed = localStorage.getItem('disclaimerAgreed');
+    
+    if (!hasAgreed) {
+      // Show disclaimer after a short delay for better UX
+      const timer = setTimeout(() => {
+        setShowDisclaimer(true);
+      }, 1500);
+      
+      return () => clearTimeout(timer);
+    }
+    
     // Smooth scroll behavior for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -33,6 +48,11 @@ const Index = () => {
     document.title = 'Custom GPT Maker Bot - Create AI Tools That Match Your Vision';
   }, []);
 
+  const handleAgreeDisclaimer = () => {
+    localStorage.setItem('disclaimerAgreed', 'true');
+    setShowDisclaimer(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#070B34] to-[#120024] text-white relative overflow-hidden">
       <SmokeBackground />
@@ -48,6 +68,8 @@ const Index = () => {
       <Disclaimer />
       <CTA />
       <Footer />
+      
+      {showDisclaimer && <DisclaimerPopup onAgree={handleAgreeDisclaimer} />}
     </div>
   );
 };
