@@ -13,6 +13,7 @@ import SmokeBackground from '@/components/SmokeBackground';
 import GPTIdeas from '@/components/GPTIdeas';
 import ToolsDisclaimer from '@/components/ToolsDisclaimer';
 import DisclaimerPopup from '@/components/DisclaimerPopup';
+import VideoBackground from '@/components/VideoBackground';
 
 const Index = () => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
@@ -67,6 +68,7 @@ const Index = () => {
       <FAQ />
       <Disclaimer />
       <CTA />
+      <VideoBackground />
       <Footer />
       
       {showDisclaimer && <DisclaimerPopup onAgree={handleAgreeDisclaimer} />}
