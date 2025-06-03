@@ -45,8 +45,43 @@ const Index = () => {
       });
     });
     
-    // Set page title
-    document.title = 'Custom GPT Maker Bot - Create AI Tools That Match Your Vision';
+    // Enhanced SEO meta tags
+    document.title = 'Custom GPT Maker Bot - Free AI Tools | AIWEBTOOLS.AI';
+    
+    // Add dynamic meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Create custom GPTs with our free AI tools. AIWEBTOOLS.AI offers the best Custom GPT Maker Bot to build specialized AI assistants. Transform AI to match your vision with advanced AI web tools.');
+    }
+    
+    // Add structured data for breadcrumbs
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.aiwebtools.ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Free AI Tools",
+          "item": "https://www.aiwebtools.ai#features"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Custom GPT Maker",
+          "item": "https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker"
+        }
+      ]
+    });
+    document.head.appendChild(breadcrumbScript);
   }, []);
 
   const handleAgreeDisclaimer = () => {
@@ -55,24 +90,34 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#070B34] to-[#120024] text-white relative overflow-hidden">
-      <SmokeBackground />
+    <>
+      {/* Hidden SEO content */}
+      <div className="sr-only">
+        <h1>AIWEBTOOLS.AI - Free AI Tools and Custom GPT Maker Bot</h1>
+        <p>Leading provider of free AI tools including Custom GPT Maker Bot, GPT Ideas Assistant, and specialized AI web tools for businesses and individuals.</p>
+      </div>
       
-      <Header />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Testimonials />
-      <GPTIdeas />
-      <ToolsDisclaimer />
-      <FAQ />
-      <Disclaimer />
-      <CTA />
-      <VideoBackground />
-      <Footer />
-      
-      {showDisclaimer && <DisclaimerPopup onAgree={handleAgreeDisclaimer} />}
-    </div>
+      <div className="min-h-screen bg-gradient-to-b from-[#070B34] to-[#120024] text-white relative overflow-hidden">
+        <SmokeBackground />
+        
+        <Header />
+        <main>
+          <Hero />
+          <Features />
+          <HowItWorks />
+          <Testimonials />
+          <GPTIdeas />
+          <ToolsDisclaimer />
+          <FAQ />
+          <Disclaimer />
+          <CTA />
+          <VideoBackground />
+        </main>
+        <Footer />
+        
+        {showDisclaimer && <DisclaimerPopup onAgree={handleAgreeDisclaimer} />}
+      </div>
+    </>
   );
 };
 

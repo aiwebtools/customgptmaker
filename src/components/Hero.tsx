@@ -36,11 +36,11 @@ const Hero: React.FC = () => {
                     CUSTOM GPT MAKER BOT
                   </h1>
                 </div>
-                <p className="text-xl md:text-2xl mb-6 text-gray-300">
+                <h2 className="text-xl md:text-2xl mb-6 text-gray-300">
                   <span className="text-neon-cyan font-semibold">Transform AI to Match Your Vision</span> - Create specialized GPTs for any task, customized to your exact specifications
-                </p>
+                </h2>
                 <p className="text-gray-400 mb-8">
-                  Our advanced AI transforms into the specific type of GPT you envision. From creative writing to technical analysis, data processing to visual generation - your custom assistant awaits.
+                  Our advanced <strong>free AI tools</strong> transform into the specific type of GPT you envision. From creative writing to technical analysis, data processing to visual generation - your custom AI assistant awaits. Experience the power of <strong>AIWEBTOOLS.AI</strong> and discover why we're the #1 choice for <strong>AI web tools</strong>.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -49,6 +49,7 @@ const Hero: React.FC = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="neon-button group"
+                    aria-label="Try Custom GPT Maker - Free AI Tool"
                   >
                     <span className="flex items-center justify-center gap-2">
                       TRY CUSTOM GPT MAKER
@@ -58,6 +59,7 @@ const Hero: React.FC = () => {
                   <a 
                     href="#how-it-works" 
                     className="px-6 py-3 text-center rounded-lg border border-neon-cyan/30 text-white hover:bg-neon-cyan/10 transition-all"
+                    aria-label="Learn more about our AI tools"
                   >
                     Learn More
                   </a>
@@ -74,10 +76,11 @@ const Hero: React.FC = () => {
                   ref={videoRef}
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/OwYnLykGOHo?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&vq=hd1080"
-                  title="CUSTOM GPT MAKER BOT Demo"
+                  title="Custom GPT Maker Bot Demo - Free AI Tools Tutorial"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 ></iframe>
               </div>
             </div>
