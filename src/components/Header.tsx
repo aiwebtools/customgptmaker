@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <NavLink href="#gpt-ideas">GPT IDEAS</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
           <NavLink href="#disclaimer">DISCLAIMER</NavLink>
-          <NavLink href="https://www.aiwebtools.ai" target="_blank">MORE AI TOOLS</NavLink>
+          <NavLink href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank">MORE AI TOOLS</NavLink>
         </nav>
         
         <div className="md:hidden">
