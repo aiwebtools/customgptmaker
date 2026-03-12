@@ -18,7 +18,7 @@ const Header: React.FC = () => {
             <h1 className="text-2xl font-bold tracking-wider text-gradient">
               CUSTOM GPT MAKER BOT
             </h1>
-            <p className="text-xs text-gray-400">Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-neon-cyan hover:text-neon-purple transition-colors">AiWebTools.Ai</a></p>
+            <p className="text-xs text-gray-400">Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-neon-cyan hover:text-neon-purple transition-colors">AiWebTools.Ai</a></p>
           </div>
         </div>
         
