@@ -59,7 +59,7 @@ const Disclaimer: React.FC = () => {
             </p>
 
             <p>
-              For the complete terms of service, please visit our <a href="https://aiwebtools.ai/terms-of-services" className="text-neon-cyan hover:underline" target="_blank" rel="noopener noreferrer">Terms of Service</a> page. By continuing to use this service, you acknowledge that you have read, understood, and agreed to this disclaimer.
+              For the complete terms of service, please visit our <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="text-neon-cyan hover:underline" target="_blank" rel="noopener noreferrer">Terms of Service</a> page. By continuing to use this service, you acknowledge that you have read, understood, and agreed to this disclaimer.
             </p>
           </div>
         </div>

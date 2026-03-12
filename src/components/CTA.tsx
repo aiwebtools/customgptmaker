@@ -41,7 +41,7 @@ const CTA: React.FC = () => {
               </span>
             </a>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition-all flex items-center justify-center gap-2"

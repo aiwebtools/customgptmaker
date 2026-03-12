@@ -80,7 +80,7 @@ const Header: React.FC = () => {
               <NavLink href="#gpt-ideas" onClick={() => setMobileMenuOpen(false)}>GPT IDEAS</NavLink>
               <NavLink href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</NavLink>
               <NavLink href="#disclaimer" onClick={() => setMobileMenuOpen(false)}>DISCLAIMER</NavLink>
-              <NavLink href="https://www.aiwebtools.ai" target="_blank" onClick={() => setMobileMenuOpen(false)}>MORE AI TOOLS</NavLink>
+              <NavLink href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" onClick={() => setMobileMenuOpen(false)}>MORE AI TOOLS</NavLink>
             </nav>
           </div>
         </div>

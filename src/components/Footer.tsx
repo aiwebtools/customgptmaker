@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-400 hover:text-neon-cyan transition-colors"
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                   Privacy Policy
                 </a>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-400 hover:text-neon-cyan transition-colors"
@@ -133,10 +133,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 mb-4 md:mb-0">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col items-center gap-4">
+          <p className="text-gray-500">
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-neon-cyan transition-colors"
@@ -145,12 +145,12 @@ const Footer: React.FC = () => {
             </a>
           </p>
           
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap justify-center gap-3">
             <a 
               href="https://chatgpt.com/g/g-U8BWKcCkq-gpt-ideas" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-4 py-2 rounded-full glass-card border border-neon-purple/30 text-neon-purple hover:bg-neon-purple/10 transition-all flex items-center"
+              className="px-4 py-2 rounded-full glass-card border border-neon-purple/30 text-neon-purple hover:bg-neon-purple/10 transition-all flex items-center text-sm"
             >
               <Lightbulb size={16} className="mr-2" />
               TRY GPT IDEAS ASSISTANT
@@ -160,17 +160,17 @@ const Footer: React.FC = () => {
               href="https://chatgpt.com/g/g-XTJkJ0mqv-custom-gpt-maker" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-4 py-2 rounded-full glass-card border border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/10 transition-all flex items-center"
+              className="px-4 py-2 rounded-full glass-card border border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/10 transition-all flex items-center text-sm"
             >
               <Bot size={16} className="mr-2" />
               TRY CUSTOM GPT MAKER
             </a>
             
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-6 py-2 rounded-full glass-card border border-white/30 text-white hover:bg-white/10 transition-all flex items-center"
+              className="px-4 py-2 rounded-full glass-card border border-white/30 text-white hover:bg-white/10 transition-all flex items-center text-sm"
             >
               More AI Tools
             </a>
